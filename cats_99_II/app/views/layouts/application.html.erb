@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <header><% current_user.username %>
+    <input type="submit" value="<%= redirect_to session_url/new %>">
+  </header>
+  <head>
+    <title>NinetyNineCats</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all' %>
+    <%= javascript_include_tag 'application' %>
+  </head>
+
+  <body>
+    <%= yield %>
+  </body>
+</html>
